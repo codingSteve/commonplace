@@ -1,31 +1,53 @@
-\documentclass[a4paper,11point]{book}
+\documentclass[a4paper]{book}
 \usepackage{tabularx}
 \usepackage{ifthen}
+\usepackage[hidelinks]{hyperref}
 
 \renewcommand{\familydefault}{\sfdefault}
-\setcounter{tocdepth}{2}
+\setcounter{tocdepth}{0}
+\setlength{\parindent}{0cm}
 
 \title{Commonplace book}  
 \author{Steven Powell}
 
 
-\newcommand{\hugeQuote}[5]{
+\newcommand{\hugeQuote}[6]{
 	\refstepcounter{section}
 	\addcontentsline{toc}{section}{\protect\numberline{\thesection}#2}
 	\label{#1}
-	\noindent
-	\begin{tabularx}{\textwidth}{ XlrX }
-  		&\multicolumn{2}{p{0.8\linewidth}}{\Huge{#2}\Huge{#3}} &\\ 
-  		& \ifthenelse{\equal{}{#5}}{}{cf. #5} & #4 & \\
+	
+	\begin{tabularx}{0.99\textwidth}{ lp{0.8\textwidth}r }
+  		&\huge{#2}\huge{#3} &
+  		\tabularnewline \tabularnewline
+  		\ifthenelse{\equal{}{#5}}{}{cf. \ref{#5}}& & #4  
+  		\tabularnewline
+  		\tabularnewline
+  		& #6 &
 	\end{tabularx}
 	\vfill
+}
+
+\newcommand{\smallQuote}[4] {
+	
+	\begin{tabularx}{\textwidth}{ XlrX }
+  		&\multicolumn{2}{p{0.90\linewidth}}
+  		{\large{#2}}\label{#1} & 
+  		\tabularnewline 
+  		\tabularnewline
+  		&\ifthenelse{\equal{}{#4}}{}{cf. \ref{#4}} & #3 & 
+  		\tabularnewline
+	\end{tabularx}
+	\bigskip
+	\hrulefill
+	\bigskip
+
 }
 
 \begin{document}
 \maketitle{}
 \tableofcontents
-\newpage
 
+\cleardoublepage
 \chapter{Focus}
 \input{Focus.tex}
 
