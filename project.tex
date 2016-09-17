@@ -4,7 +4,7 @@
 \usepackage[hidelinks]{hyperref}
 
 \renewcommand{\familydefault}{\sfdefault}
-\setcounter{tocdepth}{1}
+\setcounter{tocdepth}{0}
 \setlength{\parindent}{0cm}
 
 \title{Commonplace book}  
@@ -20,6 +20,24 @@
   		\multicolumn{2}{p{1.0\textwidth} }{\huge{#2}\huge{#3}}
   		\tabularnewline \tabularnewline
   		\ifthenelse{\equal{}{#5}}{}{cf. \ref{#5}}& #4
+  		\ifthenelse{\equal{}{#6}}{}{\tabularnewline \tabularnewline \multicolumn{2}{p{1\textwidth}}{#6}
+  		}
+	\end{tabularx}
+	\bigskip
+	\hrulefill
+	\vfill
+}
+
+\newcommand{\HugeQuote}[6]{
+	\refstepcounter{section}
+	\addcontentsline{toc}{section}{\protect\numberline{\thesection}#2}
+	\newpage
+	\label{#1}
+	
+	\begin{tabularx}{\textwidth}{ lr}
+  		\multicolumn{2}{p{1.0\textwidth} }{\huge{#2}\huge{#3}}
+  		\tabularnewline \tabularnewline
+  		\ifthenelse{\equal{}{#5}}{}{cf. \ref{#5}}& #4
   		\tabularnewline
   		\tabularnewline
   		\multicolumn{2}{p{1\textwidth}}{#6} 
@@ -27,6 +45,7 @@
 	\bigskip
 	\hrulefill
 	\vfill
+	\newpage
 }
 
 \newcommand{\smallQuote}[4] {
