@@ -17,13 +17,15 @@
 	\label{#1}
 	
 	\begin{tabularx}{\textwidth}{ lp{0.8\textwidth}r }
-  		&\huge{#2}\huge{#3} &
+  		&\huge{#2} \huge{#3} &
   		\tabularnewline \tabularnewline
-  		\ifthenelse{\equal{}{#5}}{}{cf. \ref{#5}}& & #4  
+  		\ifthenelse{\equal{}{#5}}{}{cf. \ref{#5}}& \multicolumn{2}{r}{#4}  
   		\tabularnewline
   		\tabularnewline
   		& #6 &
 	\end{tabularx}
+	\bigskip
+	\hrulefill
 	\vfill
 }
 
