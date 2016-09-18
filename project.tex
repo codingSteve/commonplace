@@ -1,7 +1,22 @@
-\documentclass[a4paper]{book}
+\documentclass[a5paper]{book}
+
 \usepackage{tabularx}
 \usepackage{ifthen}
 \usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+
+\titleformat{\chapter}[display]
+{\normalfont\Huge\filcenter\sffamily}
+{\vspace*{\fill}
+ \titlerule[1pt]%
+ \vspace{1pt}%
+ \titlerule
+ \vspace{1pc}%
+ \LARGE\MakeUppercase{\chaptertitlename}~\thechapter}
+{1pc}
+{\titlerule\Huge}
+[\vspace*{\fill}\newpage]
+
 
 \renewcommand{\familydefault}{\sfdefault}
 \setcounter{tocdepth}{0}
@@ -31,7 +46,7 @@
 \newcommand{\HugeQuote}[6]{
 	\refstepcounter{section}
 	\addcontentsline{toc}{section}{\protect\numberline{\thesection}#2}
-	\newpage
+	\vspace*{\fill}
 	\label{#1}
 	
 	\begin{tabularx}{\textwidth}{ lr}
@@ -44,13 +59,15 @@
 	\end{tabularx}
 	\bigskip
 	\hrulefill
-	\vfill
+	\vspace*{\fill}
 	\newpage
 }
 
 \newcommand{\smallQuote}[4] {
 	
+	\refstepcounter{section}
 	\begin{tabularx}{\textwidth}{ p{0.1\textwidth}p{0.8\textwidth} }
+
   		&{\large{#2}}\label{#1} 
   		\tabularnewline 
   		\tabularnewline
