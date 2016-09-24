@@ -1,0 +1,59 @@
+
+\newcommand{\hugeQuote}[6]{
+	\refstepcounter{section}
+	\addcontentsline{toc}{section}{\protect\numberline{\thesection}#2}
+	\label{#1}
+	
+	\begin{tabularx}{\textwidth}{lr}
+  		\multicolumn{2}{p{1.0\textwidth} }{\huge{#2}\huge{#3}}
+  		\tabularnewline \tabularnewline
+  		\ifthenelse{\equal{}{#5}}{}{cf. \ref{#5}}& #4 \index{#4}
+  		\ifthenelse{\equal{}{#6}}{}{\tabularnewline \tabularnewline \multicolumn{2}{p{1\textwidth}}{#6}
+  		}
+	\end{tabularx}
+	\bigskip
+	\hrulefill
+	\vfill
+}
+
+%TODO: refactor for consistency
+\newcommand{\HugeQuote}[6]{
+	\refstepcounter{section}
+	\addcontentsline{toc}{section}{\protect\numberline{\thesection}#2}
+	\vspace*{\fill}
+	\label{#1}
+	
+	\begin{tabularx}{\textwidth}{ lr}
+  		\multicolumn{2}{p{1.0\textwidth} }{\huge{#2}\huge{#3}}
+  		\tabularnewline \tabularnewline
+  		\ifthenelse{\equal{}{#5}}{}{cf. \ref{#5}}& #4 \index{#4}
+  		\tabularnewline
+  		\tabularnewline
+  		\multicolumn{2}{p{1\textwidth}}{#6} 
+	\end{tabularx}
+	\bigskip
+	\hrulefill
+	\vspace*{\fill}
+	\newpage
+}
+
+\newcommand{\smallQuote}[4] {
+	
+	\refstepcounter{section}
+	%TODO: fix layout
+	\begin{tabularx}{\textwidth}{ p{0.1\textwidth}p{0.8\textwidth} }
+
+  		&{\large{#2}}\label{#1} 
+  		\tabularnewline 
+  		\tabularnewline
+  		\ifthenelse{\equal{}{#4}}{}{cf. \ref{#4}} & 
+  		\multicolumn{1}{r}{#3\index{#3}}
+  		\tabularnewline
+	\end{tabularx}
+	\bigskip
+	\hrulefill
+	\bigskip
+
+}
+
+\newcommand{\llink}[1] {\footnote{\href{#1}{#1}}}
