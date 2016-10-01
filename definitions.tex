@@ -6,7 +6,7 @@
 	\begin{tabularx}{\textwidth}{ lr}
   		\multicolumn{2}{p{1.0\textwidth}}{\label{#1}#2}
   		\tabularnewline \tabularnewline
-  		\ifthenelse{\equal{}{#4}}{}{cf. \ref{#4}}& #3 \index{#3}
+  		\ifthenelse{\equal{}{#4}}{}{\S \ref{#4}}& #3 \thesection \index{#3}
   		\tabularnewline
   		\tabularnewline
   		\multicolumn{2}{p{1\textwidth}}{#5} 
@@ -16,7 +16,7 @@
 }
 
 \newcommand{\hugeQuote}[6]{
-	\standardQuote{#1}{\huge{\thesection}: \huge{#2}\huge{#3}}{#4}{#5}{#6}
+	\standardQuote{#1}{\huge{#2}\huge{#3}}{#4}{#5}{#6}
 	\vfill
 }
 
@@ -24,13 +24,13 @@
 \newcommand{\HugeQuote}[6]{
     \cleardoublepage
 	\vspace*{\fill}
-	\standardQuote{#1}{\huge{\thesection:} \huge{#2}\huge{#3}}{#4}{#5}{#6}
+	\standardQuote{#1}{\huge{#2}\huge{#3}}{#4}{#5}{#6}
 	\vspace*{\fill}
 	\newpage
 }
 
 \newcommand{\smallQuote}[4] {
-	\standardQuote{#1}{\large{\thesection}: \large{#2}}{#3}{#4}{}
+	\standardQuote{#1}{\large{#2}}{#3}{#4}{}
 }
 
 \newcommand{\llink}[1] {\footnote{\href{#1}{#1}}}

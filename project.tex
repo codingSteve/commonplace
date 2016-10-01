@@ -28,7 +28,7 @@
 \setlength{\parindent}{0cm}
 \makeindex
 
-\title{Commonplace book}  
+\title{Pointers}  
 \author{Steven Powell}
 %\location{London, Stourbridge, Polzeath}
 
@@ -38,9 +38,11 @@
 \maketitle{}
 \tableofcontents
 
+% \part{Introduction}
 \chapter{Introduction}
 \input{Introduction.tex}
 
+% \part{Ourselves}
 \chapter{Action}
 \input{Action.tex}
 
@@ -62,6 +64,7 @@
 \chapter{Confidence}
 \input{Confidence.tex}
 
+% \part{Others}
 \chapter{Gratitude}
 \input{Gratitude.tex}
 
@@ -71,7 +74,12 @@
 \chapter{Leadership}
 \input{Leadership.tex}
 
-\cleardoublepage
+% \part{Notes}
+
+\refstepcounter{chapter}
+\addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}Bibliography}
+\input{Books}
+
 \refstepcounter{chapter}
 \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}Index}
 
