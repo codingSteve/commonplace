@@ -3,15 +3,16 @@
 	\refstepcounter{section}
 	\addcontentsline{toc}{section}{\protect\numberline{\thesection}}
 	
-	\begin{tabularx}{\textwidth}{ lr}
-  		\multicolumn{2}{p{1.0\textwidth}}{\label{#1}#2}
+	\begin{tabularx}{\linewidth}{ lr}
+  		\multicolumn{2}{p{1.0\linewidth}}{\label{#1}#2}
   		\tabularnewline \tabularnewline
   		\ifthenelse{\equal{}{#4}}{}{\S \ref{#4}}& #3 (\thesection) \index{#3}
   		\tabularnewline
   		\tabularnewline
-  		\multicolumn{2}{p{1\textwidth}}{#5} 
+  		\multicolumn{2}{p{1\linewidth}}{#5} 
   	\end{tabularx}
-	\bigskip
+	% \bigskip
+	
 	\hrulefill
 }
 
@@ -22,7 +23,6 @@
 
 %TODO: refactor for consistency
 \newcommand{\HugeQuote}[6]{
-    \cleardoublepage
 	\vspace*{\fill}
 	\standardQuote{#1}{\huge{#2}\huge{#3}}{#4}{#5}{#6}
 	\vspace*{\fill}
