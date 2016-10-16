@@ -2,7 +2,7 @@
 	"folders":
 	[
 		{
-			"path": "/Users/stevenpowell/DEV/codingSteve/commonplace",
+			"path": "./",
       "file_exclude_patterns" : [ "*.pdf", "*.fls", "*.log", "*.pdf", "*.toc", "*.aux", ".gitignore", "*.fdb_latexmk", "*.gz", "*.sublime*" ] 
 
 		}
