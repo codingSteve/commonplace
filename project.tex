@@ -11,6 +11,7 @@
 \usepackage{multicol}
 \usepackage{microtype}
 \usepackage{marginnote}
+\usepackage{dirtytalk}
 
 
 \titleformat{\chapter}[display]
@@ -31,7 +32,7 @@
 \setlength{\parindent}{0cm}
 \makeindex
 
-\title{Pointers}
+\title{Pointers and references}
 
 \input{definitions}
 
@@ -78,12 +79,12 @@
 % \part{Notes}
 
 \refstepcounter{chapter}
-\addcontentsline{toc}{chapter}{\protect \numberline{}Bibliography}
+\addcontentsline{toc}{chapter}{\protect \numberline{\thechapter}Bibliography}
 % \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}Bibliography}
 \input{Books}
 
 \refstepcounter{chapter}
-\addcontentsline{toc}{chapter}{\protect\numberline{}Index}
+\addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}Index}
 
 \printindex
 
