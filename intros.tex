@@ -1,0 +1,53 @@
+\documentclass{book}
+% perfect size would be the same as a pocket penguin
+%Product Dimensions: 11.1 x 0.9 x 18.1 cm
+%\usepackage[paperheight=18.1cm,paperwidth=11.1cm]{geometry}
+
+%but for practicality we'll go for A Format
+\usepackage[paperheight=17.8cm,paperwidth=11.0cm]{geometry}
+
+\usepackage{tabularx}
+\usepackage{ifthen}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{makeidx}
+% \usepackage{microtype}
+\usepackage{dirtytalk}
+% \usepackage{showframe}
+\usepackage{datetime}
+
+
+\renewcommand{\familydefault}{\sfdefault}
+\setcounter{tocdepth}{0}
+\setlength{\parindent}{0cm}
+\makeindex
+\renewcommand{\cleardoublepage}{\newpage}
+
+\input{definitions}
+
+\begin{document}
+
+\input{Introduction.tex}
+
+\chapter{Action}
+\input{ActionIntro.tex}
+\chapter{Focus}
+\input{FocusIntro.tex}
+\chapter{Patience}
+\input{PatienceIntro.tex}
+\chapter{Learning}
+\input{LearningIntro.tex}
+\chapter{Resilience}
+\input{ResilienceIntro.tex}
+\chapter{Humility}
+\input{HumilityIntro.tex}
+\chapter{Confidence}
+\input{ConfidenceIntro.tex}
+\chapter{Gratitude}
+\input{GratitudeIntro.tex}
+\chapter{Generosity}
+\input{GenerosityIntro.tex}
+\chapter{Leadership}
+\input{LeadershipIntro.tex}
+
+\end{document}
