@@ -14,6 +14,7 @@
 % \usepackage{microtype}
 \usepackage{dirtytalk}
 % \usepackage{showframe}
+\usepackage{datetime}
 
 
 \titleformat{\chapter}[display]
@@ -34,8 +35,13 @@
 \setlength{\parindent}{0cm}
 \makeindex
 
+%todo review initial notes
+\newdateformat{duration}{May 2014 - \monthname[\THEMONTH] \THEYEAR}
+
+
 \title{Pointers and references}
 \author{}
+\date{\duration\today}
 
 \input{definitions}
 
