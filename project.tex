@@ -11,33 +11,18 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{titlesec}
 \usepackage{makeidx}
-\usepackage{microtype}
+% \usepackage{microtype}
 \usepackage{dirtytalk}
 % \usepackage{showframe}
 \usepackage{datetime}
-
-
-\titleformat{\chapter}[display]
-{\normalfont\Huge\filcenter\sffamily}
-{\vspace*{\fill}
- \titlerule[1pt]%
- \vspace{1pt}%
- \titlerule
- \vspace{1pc}%
- \LARGE\MakeUppercase{\chaptertitlename}~\thechapter}
-{1pc}
-{\titlerule\Huge}
-[\vspace*{\fill}\newpage]
-
+\usepackage{graphicx}
 
 \renewcommand{\familydefault}{\sfdefault}
 \setcounter{tocdepth}{0}
 \setlength{\parindent}{0cm}
 \makeindex
 
-%todo review initial notes
 \newdateformat{duration}{March 2014 - \monthname[\THEMONTH] \THEYEAR}
-
 
 \title{Pointers and references}
 \author{}
@@ -50,6 +35,7 @@
 \tableofcontents
 
 % \part{Introduction}
+%\refstepcounter{chapter}
 \chapter{Introduction}
 \input{Introduction.tex}
 
@@ -92,12 +78,12 @@
 % \part{Notes}
 
 \refstepcounter{chapter}
-\addcontentsline{toc}{chapter}{\protect \numberline{\thechapter}Bibliography}
+% \addcontentsline{toc}{chapter}{\protect \numberline{\thechapter}Bibliography}
 % \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}Bibliography}
 \input{Books}
 
 \refstepcounter{chapter}
-\addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}Index}
+% \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}Index}
 
 \printindex
 

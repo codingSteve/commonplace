@@ -39,3 +39,20 @@
   \ifodd\value{page}\hbox{}\newpage\fi
 }
 \newcommand*\cleartorightpage{\cleardoublepage }
+
+
+
+\titleformat{\chapter}[display]
+{\normalfont\Huge\filcenter\sffamily}
+{
+ \vspace*{\fill}
+ \titlerule[1pt]%
+ \vspace{1pt}%
+ \titlerule
+ \vspace{1pc}%
+ \LARGE\MakeUppercase{\chaptertitlename}~\thechapter
+ }
+{1pc}
+{\titlerule\huge}
+[\vspace*{\fill}\newpage]
+
