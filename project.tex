@@ -7,9 +7,7 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{titlesec}
 \usepackage{makeidx}
-% \usepackage{microtype}
 \usepackage{dirtytalk}
-% \usepackage{showframe}
 \usepackage{datetime}
 \usepackage{graphicx}
 
@@ -30,6 +28,10 @@
 \maketitle{}
 
 \setcounter{chapter}{-1}
+
+\cleartorightpage
+
+\input{qualities.tex}
 
 \refstepcounter{chapter}
 \input{Introduction.tex}
@@ -71,7 +73,6 @@
 \refstepcounter{chapter}
 \input{Conclusion}
 
-\refstepcounter{chapter}
-\printindex
+\newpage
 
 \end{document}
