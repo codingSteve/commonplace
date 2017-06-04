@@ -28,6 +28,15 @@
 	\newpage
 }
 
+\newcommand{\VerticalQuote}[6]{
+	\vspace*{\fill}
+	\rotatebox[origin=c]{90}{
+		\standardQuote{#1}{\huge{#2}\huge{#3}}{#4}{#5}{#6}
+	}
+	\vspace*{\fill}
+	\newpage
+}
+
 \newcommand{\smallQuote}[4] {
 	\standardQuote{#1}{\large{#2}}{#3}{#4}{}
 }
